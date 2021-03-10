@@ -1,0 +1,91 @@
+.games-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.games-nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+    background-color: #373737;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+}
+
+.games-nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.games-category {
+    margin: 0 auto;
+    width: 57%;
+    background-color: white;
+}
+
+.games-category ul {
+    text-align: left;
+}
+
+.games-category ul li {
+    list-style-type: none;
+    display: inline-flex;
+    padding: 5px;
+    position: relative;
+}
+
+.games-category img {
+    width: 260px;
+    height: 154px;
+    border-radius: 5px;
+}
+
+.game:hover>.overlay {
+    display: block;
+}
+
+.game {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+}
+
+.selected {
+    background-color: #8DC63F !important;
+}
+
+.overlay {
+    position: absolute;
+    display: none;
+    width: 96%;
+    height: 93%;
+    top: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    top: 4px;
+    border-radius: 5px;
+}
+
+.overlay>button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.jackpot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    ;
+}
+
+
+/*#8DC63F, #373737, #FFFFFF, #FCFCFC*/

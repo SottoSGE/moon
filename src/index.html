@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>MyApp</title>
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <app-root></app-root>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $(".games-nav > ul > li:nth-child(2)").addClass('selected');
+                $(".games-nav > ul > li").click(function() {
+                    $(this).siblings().removeClass('selected');
+                    $(this).toggleClass('selected')
+                });
+            });
+        </script>
+    </body>
+
+</html>

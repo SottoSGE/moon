@@ -1,0 +1,27 @@
+<div class="games">
+    <div class="games-nav">
+        <ul>
+            <li (click)='setListFilter("top")'>Top Games</li>
+            <li (click)='setListFilter("new")'>New Games</li>
+            <li (click)='setListFilter("slots")'>Slots</li>
+            <li (click)='setListFilter("jackpots")'>Jackpots</li>
+            <li (click)='setListFilter("live")'>Live</li>
+            <li (click)='setListFilter("blackjack")'>Blackjack</li>
+            <li (click)='setListFilter("roulette")'>Roulette</li>
+            <li (click)='setListFilter("table")'>Table</li>
+            <li (click)='setListFilter("poker")'>Poker</li>
+            <li (click)='setListFilter("other")'>Other</li>
+        </ul>
+    </div>
+    <div class="games-category">
+        <div class="game" *ngFor='let game of filteredGames'>
+            <img [src]='game.image' alt="{{game.name}}" [title]='game.name'>
+            <div *ngFor='let jackpot of jackpots'>
+                <div *ngIf='game.id==jackpot.game' class="jackpot game.id">{{jackpot.amount}}</div>
+            </div>
+            <div class="overlay">
+                <button>Play Now</button>
+            </div>
+        </div>
+    </div>
+</div>
